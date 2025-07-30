@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Section */
+.main {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-container {
+    margin-bottom: 30px;
+}
+
+.image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.image-container h1 {
+    font-size: 2.2rem;
+    margin: 15px 0 5px;
+    letter-spacing: 3px;
+}
+
+.image-container p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Input Section */
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.talk {
+    background: #accd49;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.talk:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(194, 231, 99, 0.4);
+}
+
+.content {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main {
+        padding: 20px;
+    }
+
+    .image-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-container p {
+        font-size: 0.95rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .talk {
+        padding: 16px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 15px;
+    }
+
+    .image img {
+        max-width: 180px;
+    }
+
+    .image-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .image-container p {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        font-size: 0.95rem;
+    }
+
+    .talk {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+}
